@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL에 JS 코드 작성</title>
+</head>
+
+<body>
+    <h3>링크의 href에 자바스크립트 코드 작성</h3>
+    <hr>
+    <a href="javascript:darkMode()">배경색 변경</a>
+    <a href="javascript:whiteMode()">배경색 변경</a>
+
+    <a href="javascript:skyblue()">배경색 변경</a>
+</body>
+<script>
+    function darkMode() {
+        document.body.style.backgroundColor = '#4A4F5A';
+    }
+
+    function whiteMode() {
+        document.body.style.backgroundColor = 'white';
+    }
+
+    function skyblue() {
+        document.body.style.backgroundColor = 'skyblue';
+    }
+</script>
+
+</html>
