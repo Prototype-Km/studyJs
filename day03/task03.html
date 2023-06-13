@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 분석결과 
+    hr
+    통과!
+
+    정확한 암호가 입력될 때까지 계속 Prompt()를 사용하여 암호를 입력ㅂ다는다.
+    암호는 '호랑이' 이다
+        -->
+</body>
+<script>
+    with(document) {
+        write(`<h1>분석결과</h1>`);
+        write("<hr>");
+    }
+
+    const realCode = "호랑이";
+
+    while (true) {
+        let code = prompt("암호를 입력해라 ~", "틀리면 컴터 폭발한디 ㅋㅋ");
+        if (code == realCode) {
+            document.write(`<h1>통과!! </h1>`);
+            break;
+        }
+    }
+</script>
+
+</html>

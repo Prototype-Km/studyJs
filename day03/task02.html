@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task02.html</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let inputname = prompt("이름 입력해라", "ex ) 홍길동 ");
+    let inputDay = prompt("오늘의 요일을 입력하시오", "요일말고 다른거 입력하면 뒤짐");
+
+    switch (inputDay) {
+        case "월":
+        case "화":
+        case "수":
+        case "목":
+            state = `${inputDay}는 출근ㅋ ㅋ .ㅋ .ㅋ .ㅋ `;
+            break;
+        case "금":
+        case "토":
+        case "일":
+            state = `${inputDay}는 휴일^^! 놀러가자 헿ㄱ헥헽ㅎ헤헥헥ㅎㄱㅎ`;
+            break;
+        default:
+            state = `해킹완료 ㅋ`;
+    }
+
+    with(document) {
+        write(`<h3>월 화 수 목 금 토 일</h3>`);
+        write(`<hr>`);
+        write(`${inputname}(은)는 ${state}이야 ~ 개꿀 딱 . `);
+    }
+</script>
+
+</html>

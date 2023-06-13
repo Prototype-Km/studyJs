@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- pr("%", 5);
+        결과 : %%%%%
+
+        위의 결과가 나오는 함수를 선언하여 사용한다.
+        출력은 콜백함수를 사용한다.
+    -->
+</body>
+<script>
+    //출력할 문자를 다이얼로그로 받는다
+    //횟수랑 
+    let inputStr = prompt("출력할 문자");
+    let inputCnt = prompt("카운트 숫자");
+
+    let temp = "";
+
+    with(document) {
+        write(`<h2>pr(<q>${inputStr}</q>,${inputCnt})</h2>`);
+        write(`<button onclick="countStr('${inputStr}',${inputCnt}, printStr)">결과확인 </button>`);
+    }
+
+    function countStr(inputStr, inputCnt, callback) {
+        for (let i = 0; i < inputCnt; i++) {
+            temp += inputStr;
+        }
+        if (callback) {
+            callback(temp, inputCnt);
+        }
+        return temp;
+    }
+
+
+    function printStr(temp) {
+        with(document) {
+            write(`<h2>pr(<q>${inputStr}</q>,${inputCnt})</h2>`);
+            write(`<h2>결과 : ${temp}</h2>`);
+        }
+    };
+</script>
+
+</html>
