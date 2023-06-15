@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자를 이용한 선택</title>
+</head>
+
+<body>
+    <h1>CSS 선택자를 이용한 선택</h1>
+    <p>첫 번째 단락이에요 !</p>
+    <ul>
+        <li class="odd">치킨</li>
+        <li class="even">피자</li>
+        <li class="odd">초밥</li>
+        <li class="even">카레</li>
+        <li class="odd">제육덮밥</li>
+    </ul>
+</body>
+<script>
+    const oddList = document.querySelectorAll(".odd");
+    const evenList = document.querySelectorAll("li.even");
+    console.log(oddList);
+    console.log(evenList);
+    const list = document.querySelectorAll("li");
+    console.log(list);
+
+    /*
+        odd의 글자색은 전부 보라색으로, even의 글자색은 원하는 색으로 변경한다.
+        만약 본인이 잘한다고 생각하면, 한 줄로 해결한다.
+    */
+    // oddList.forEach(odd => odd.style.color = "purple");
+    // evenList.forEach(even => even.style.color = 'gray');
+
+    // list.forEach((li, i) => {(i + 1) % 2 == 0 ? li.style.color = "purple" : li.style.color = "green";})
+
+    // list.forEach(li => li.style.color = li.getAttribute("class") == 'odd' ? "purple" : "red");
+    list.forEach(li => li.style.color = li.getAttribute("class") == 'odd' ? "green" : 'blue');
+</script>
+
+</html>

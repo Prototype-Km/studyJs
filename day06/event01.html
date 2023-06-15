@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 이벤트</title>
+</head>
+
+<body>
+    <h3>CSS 스타일 동적 변경</h3>
+    <hr>
+    <p>클릭하세요</p>
+    <input name="changePtag" type="button" value="스타일 변경">
+</body>
+<!-- 버튼을 클릭할때 P태그 수정 -->
+<script>
+    // const btn1 = document.getElementsByName('changePtag');
+    const btn1 = document.querySelector("input[type=button]");
+    console.log(btn1);
+
+    // let pTag = document.querySelector('p');
+    // console.log(pTag);
+
+    globalThis.count = 0;
+    btn1.addEventListener('click', function () {
+        pTag = document.querySelector('p');
+        if (pTag.innerHTML == "시간초과.") {
+            console.log(pTag);
+            pTag.innerHTML = `시간초과.${++globalThis.count}회 차.`;
+
+            return;
+        };
+        pTag.innerHTML = "시간초과."
+        pTag.style.background = "gray";
+        pTag.style.fontSize = "30px";
+        pTag.style.border = "3px dashed red";
+        pTag.style.width = "40vw"; //부모 요소가 아닌 브라우저 기준의 %
+    });
+
+    // btn1.forEach(btn => btn.addEventListener('click', function () {
+    //     pTag.innerHTML = "짜쟌~";
+    // }))
+</script>
+
+</html>
