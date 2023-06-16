@@ -9,18 +9,30 @@
 // 출력 예 ) 이 찬 * 
 const btn1 = document.querySelector("input[type=button]");
 const arDiv = document.querySelectorAll(".square");
-globalThis.inputName;
 
-arDiv.forEach((div,i) => div.addEventListener('click',function(){
-    console.log(globalThis.inputName[i]);
-}))
+function showCharacter(name){
+    arDiv.forEach((div,i) => div.addEventListener('click',function(){
+        console.log(i);
+        console.log(name[i]);
+        arDiv[i].innerHTML += name[i];
 
-btn1.addEventListener('click',function(){
-    globalThis.inputName = document.querySelector("input[name=name]").value.split("");
-    //이름 가져와서 값 저장하고 클릭하면 이름 인덱스로 보여줄거임change함수
-    //Array로 바꿔서 인덱스
-    // inputName.forEach((n , i) => arDiv[i].innerHTML = n);
-    });
+    }));
+};
+
+function register(callback){
+    let text = "";
+    let name = document.querySelector("input[name=name]").value;
+    
+    arDiv.forEach(div => div.innerHTML ="");
+    
+    for(let i=0; i<3-globalThis.name.length; i++){
+        text += "♥︎";
+    }
+    name += text;
+    callback(name);
+}
+
+
         
 
 
